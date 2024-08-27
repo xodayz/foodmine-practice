@@ -8,7 +8,7 @@ export const sample_foods: Food[] = [
         tags: ["fast food", "italian"],
         favorite: true,
         stars: 4.0,
-        imageURL: "assets/food-1.jpg",
+        imageURL: '/food-1.jpg',
         origins: ["Italy"],
         cookTime: "30 minutes"
     },
@@ -19,7 +19,7 @@ export const sample_foods: Food[] = [
         tags: ["fast food", "american"],
         favorite: false,
         stars: 3.0,
-        imageURL: "assets/food-3.jpg",
+        imageURL: "/food-2.jpg",
         origins: ["USA"],
         cookTime: "20 minutes"
     },
@@ -30,7 +30,7 @@ export const sample_foods: Food[] = [
         tags: ["japanese"],
         favorite: true,
         stars: 5.0,
-        imageURL: "assets/food-7.jpg",
+        imageURL: "/food-3.jpg",
         origins: ["Japan"],
         cookTime: "40 minutes"
     }
