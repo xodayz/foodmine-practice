@@ -65,3 +65,7 @@ a span{
     width: 100%;
     min-width: 8rem;
 }
+
+.cart-quantity{
+    color: #222831 !important;
+}
