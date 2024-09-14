@@ -4,11 +4,12 @@ import { FoodService } from '../../../services/food.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { StarRatingComponent } from "../../partials/star-rating/star-rating.component";
+import { SearchBarComponent } from '../../partials/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, StarRatingComponent],
+  imports: [CommonModule, RouterModule, StarRatingComponent, SearchBarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
