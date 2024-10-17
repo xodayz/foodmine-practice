@@ -27,7 +27,7 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
-  changeQuantitY(foodId: string, quantity: number){
+  changeQuantity(foodId: string, quantity: number){
     let cartItem = this.cart.items.find(item => item.food.id === foodId);
     if(!cartItem) return;
 
@@ -54,8 +54,17 @@ export class CartService {
     this.cartSubject.next(this.cart); 
   }
 
-  private getFromLocalStorage():Cart{
-    const cartJSON = localStorage.getItem('Cart');
-    return cartJSON? JSON.parse(cartJSON): new Cart();
+  private getFromLocalStorage(): Cart {
+    if (typeof localStorage !== 'undefined') {
+      const cartJson = localStorage.getItem('cart');
+      return cartJson ? JSON.parse(cartJson) : new Cart();
+    }
+    return new Cart();
+  }
+
+  private saveToLocalStorage(cart: Cart): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
   }
 }
